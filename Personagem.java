@@ -1,10 +1,32 @@
 public class Personagem{
 String nome;
-int energia;
-int fome;
-int sono;
-
+private int energia = 10;
+private int fome = 0;
+private int sono = 0;
 final static int LIMITE_SUPERIOR = 10;
+
+public Personagem(int energia, int fome, int sono) {
+    if(energia >= 0 && energia <=10)
+        this.energia = energia;
+    if(fome >= 0 && fome <=10)
+        this.fome = fome;
+    if(sono >= 0 && sono <=10)
+        this.sono = sono;
+}
+
+public Personagem(String nome, int energia, int fome, int sono) {
+    this(energia,fome,sono);
+    this.nome = nome;
+    
+}
+
+public void setNome(String nome){
+    this.nome = nome;
+}
+
+public String getNome(){
+    return this.nome;
+}
 
 void cacar(){
     //this é instancia e não existe no método estatico (static)

@@ -8,8 +8,8 @@ public class jogo {
        // p.cacar();
        // p.dormir();
        // p.comer();
-      Personagem cacador = new Personagem();
-      cacador.nome = "Caçador";
+      Personagem cacador = new Personagem(10, 0, 0);
+      cacador.setNome("Caçador");
       Random gerador = new Random();
 
           //1: caçar
