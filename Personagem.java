@@ -19,7 +19,7 @@ void cacar(){
     
 void comer(){
     if(this.fome >= 1){
-        System.out.println(nome + " está comendo...");
+        System.out.println(nome + "está comendo...");
         this.fome = this.fome - 1;
         this.energia = this.energia + 1 <= 10 ? this.energia + 1 : this.energia;
     }   
