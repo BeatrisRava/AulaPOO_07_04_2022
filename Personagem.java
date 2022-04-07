@@ -31,8 +31,13 @@ void comer(){
 }
 
 void dormir(){
-    System.out.println(String.format(
-        "%s dormindo...", nome));
+    if(this.sono >= 1){
+        System.out.println(String.format(
+            "%s dormindo...", this.nome));
+            this.sono -= 1;
+            this.energia = this.energia + 1 <= 10 ? this.energia + 1 : this.energia;
+    }
+    
 }
 
 }
