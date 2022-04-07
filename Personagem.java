@@ -9,7 +9,7 @@ final static int LIMITE_SUPERIOR = 10;
 void cacar(){
     //this é instancia e não existe no método estatico (static)
     if(this.energia >= 2){
-  System.out.printf(nome + "caçando...\n");
+  System.out.printf(nome + " está caçando...\n");
   this.energia = this.energia - 2;
     }
     else{
@@ -19,7 +19,7 @@ void cacar(){
     
 void comer(){
     if(this.fome >= 1){
-        System.out.println(this.nome + "comendo...");
+        System.out.println(nome + " está comendo...");
         this.fome = this.fome - 1;
         this.energia = this.energia + 1 <= 10 ? this.energia + 1 : this.energia;
     }   
@@ -31,13 +31,18 @@ void comer(){
 }
 
 void dormir(){
+
     if(this.sono >= 1){
         System.out.println(String.format(
-            "%s dormindo...", this.nome));
+            " %s dormindo...", this.nome));
             this.sono -= 1;
             this.energia = this.energia + 1 <= 10 ? this.energia + 1 : this.energia;
     }
-    
+
+    else{
+        System.out.printf("Sem sono para dormir...");
+    }
+        
 }
 
 }
